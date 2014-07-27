@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Score Keeping admin</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script src="index.js"></script>
+	</head>
+  	<body>
+		<h1>Basis Ping Pong</h1>
+		<div class="row">
+			<div class="col-sm-offset-1 col-xs-12 col-sm-4">
+				<h2>Standings & Results</h2>
+				<table class="table">
+					<caption>General Standings</caption>
+					<tr>
+						<th>Name</th>
+						<th>Wins</th>
+						<th>Losses</th>
+					</tr>
+					<!-- Insert actual poitions -->
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>  
+				</table>
+
+
+				<table class="table table-striped">
+					<caption>Matches</caption>
+					<tr>
+						<th colspan="2">Player 1</th>
+						<th colspan="2">Player 2</th>
+						<th>Date</th>
+					</tr>
+					<!-- Insert actual poitions -->
+					<tr>
+						<td>edan</td>
+						<td>3</td>
+						<td>2</td>
+						<td>josh</td>
+						<td>mar 12</td>
+					</tr>  
+					<tr>
+						<td>edan</td>
+						<td>3</td>
+						<td>2</td>
+						<td>josh</td>
+						<td>mar 12</td>
+					</tr>  
+					<tr>
+						<td>edan</td>
+						<td>3</td>
+						<td>2</td>
+						<td>josh</td>
+						<td>mar 12</td>
+					</tr>  
+				</table>
+			</div>
+			
+			<!-- Form -->
+			<div class="newMatch col-sm-offset-1 col-xs-12 col-sm-5">
+				<div class="content">
+					<h2>New Match</h2>
+					<form role="form" id="formMatch" class="form-inline">
+					<!-- Player names -->
+					<div class="form-group pName">
+						<label for="player1">Player 1 (Door side)</label>
+						<input type="text" class="form-control" id="player1" placeholder="Player 1">
+					</div>
+					<div class="form-group pName">
+						<label for="player2">Player 2  (Window side)</label>
+						<input type="text" class="form-control" id="player2" placeholder="Player 2">
+					</div>
+					<hr>
+					<!-- Games -->
+					<h4>Games</h4>
+					<div class="games">
+						<div class="row">
+							<label class="col-sm-2">Game #</label>
+							<label class="col-sm-2 p1name">Player 1</label>
+							<label class="col-sm-3 p2name">Player 2</label>
+						</div>
+						<div class="row game ">
+							<label class="gameNum col-sm-2">1</label>
+							<div class="col-sm-2">
+								<select id="p1g1" class="p1g form-control">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+								</select>
+							</div>
+							<div class="col-sm-3">
+								<select id="p2g1" class="p2g form-control">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="addRemoveBtns">
+							<!-- <div class="addGame ">Add Game</div> -->
+							<span class="addGame btn btn-success btn-xs ">Add Game</span>
+							<button  class="removeGame btn btn-danger btn-xs">Remove last Game</button>
+						</div>
+					</div>
+					
+					<hr>
+				
+					<button type="submit" class="submit btn btn-primary">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+  </body>
+</html>
