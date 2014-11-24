@@ -919,3 +919,2688 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 01:17:42
 
 
 Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2014-07-27 01:17:42 -0700
+
+
+Started POST "/players" for 127.0.0.1 at 2014-11-23 14:42:40 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"87RpYjCn7dexOylE9MUeEA644w/2fAlyGk3xi6vyjVc=", "player"=>{"name"=>"afas"}, "commit"=>"Save Player"}
+Completed 500 Internal Server Error in 17ms
+
+ActionView::MissingTemplate (Missing template players/create, application/create with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/edan/Projects/ScoreKeeper/app/views"
+):
+  app/controllers/players_controller.rb:8:in `create'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.0.0-p451@railstutorial_rails_4_0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.6ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2014-11-23 14:43:27 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"87RpYjCn7dexOylE9MUeEA644w/2fAlyGk3xi6vyjVc=", "player"=>{"name"=>"afas"}, "commit"=>"Save Player"}
+Completed 500 Internal Server Error in 2ms
+
+ActionView::MissingTemplate (Missing template players/create, application/create with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/edan/Projects/ScoreKeeper/app/views"
+):
+  app/controllers/players_controller.rb:8:in `create'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.0.0-p451@railstutorial_rails_4_0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started POST "/players" for ::1 at 2014-11-23 15:22:46 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"87RpYjCn7dexOylE9MUeEA644w/2fAlyGk3xi6vyjVc=", "player"=>{"name"=>"afas"}, "commit"=>"Save Player"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 18ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePlayers (20140706224823)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/edan/Projects/ScoreKeeper/db/migrate/20140706224823_create_players.rb:6)
+  [1m[35m (0.4ms)[0m  CREATE TABLE "players" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140706224823"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateGames (20141123232633)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGames (20141123232633)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mPlayer Load (7.9ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games"  ORDER BY "games"."id" ASC LIMIT 1
+SQLite3::SQLException: no such table: games: SELECT  "games".* FROM "games"  ORDER BY "games"."id" ASC LIMIT 1
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games"[0m
+SQLite3::SQLException: no such table: games: SELECT "games".* FROM "games"
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games"[0m
+SQLite3::SQLException: no such table: games: SELECT "games".* FROM "games"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGames (20141123232634)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGames (20141123232634)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGames (20141123233734)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGames (20141123233836)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player1_id" integer, "player2_id" integer, "player1_points" integer, "player2_points" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141123233836"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mPlayer Load (7.6ms)[0m  [1mSELECT "players".* FROM "players"[0m
+
+
+Started POST "/players" for ::1 at 2014-11-23 15:42:31 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"87RpYjCn7dexOylE9MUeEA644w/2fAlyGk3xi6vyjVc=", "player"=>{"name"=>"Edan"}, "commit"=>"Save Player"}
+Completed 500 Internal Server Error in 13ms
+
+NameError (undefined local variable or method `parames' for #<PlayersController:0x007fd9c804b290>):
+  app/controllers/players_controller.rb:8:in `create'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.4ms)
+
+
+Started POST "/players" for ::1 at 2014-11-23 15:42:42 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"87RpYjCn7dexOylE9MUeEA644w/2fAlyGk3xi6vyjVc=", "player"=>{"name"=>"Edan"}, "commit"=>"Save Player"}
+Completed 500 Internal Server Error in 5ms
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/players_controller.rb:8:in `create'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.9ms)
+
+
+Started POST "/players" for ::1 at 2014-11-23 15:44:54 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"87RpYjCn7dexOylE9MUeEA644w/2fAlyGk3xi6vyjVc=", "player"=>{"name"=>"Edan"}, "commit"=>"Save Player"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "players" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-23 23:44:54.597455"], ["name", "Edan"], ["updated_at", "2014-11-23 23:44:54.597455"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2014-11-23 15:44:54 -0800
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (0.5ms)
+Warning. Error encountered while saving cache 6155d9a6a0db5ce4c6d7bef4763ea43e9e7a5135/dashboard.css.scssc: can't dump anonymous class #<Class:0x007fd9c14527c8>
+
+Warning. Error encountered while saving cache 6155d9a6a0db5ce4c6d7bef4763ea43e9e7a5135/players.css.scssc: can't dump anonymous class #<Class:0x007fd9c14527c8>
+
+Completed 200 OK in 966ms (Views: 965.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 15:44:55 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 15:44:55 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 15:44:55 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 15:44:55 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 15:44:55 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 15:44:55 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 15:44:55 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 15:44:55 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 15:44:55 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMatches (20141123235100)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player1_id" integer, "player2_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141123235100"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to RemovePlayersFromGame (20141123235352)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TEMPORARY TABLE "agames" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player1_id" integer, "player2_id" integer, "player1_points" integer, "player2_points" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  SELECT * FROM "games"
+  [1m[36m (0.7ms)[0m  [1mDROP TABLE "games"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player2_id" integer, "player1_points" integer, "player2_points" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "agames"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "agames"
+  [1m[36m (0.1ms)[0m  [1mCREATE TEMPORARY TABLE "agames" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player2_id" integer, "player1_points" integer, "player2_points" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "games"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "games"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player1_points" integer, "player2_points" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "agames"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "agames"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141123235352"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players"
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 16:01:46 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (0.6ms)
+Warning. Error encountered while saving cache 6155d9a6a0db5ce4c6d7bef4763ea43e9e7a5135/matches.css.scssc: can't dump anonymous class #<Class:0x007fd9c14527c8>
+
+Completed 200 OK in 135ms (Views: 118.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:01:46 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:01:46 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:01:46 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:01:46 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:01:46 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:01:46 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:01:46 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:01:46 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:01:46 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:01:46 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:01:46 -0800
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 16:02:11 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:02:11 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:02:11 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:02:11 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:02:11 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:02:11 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:02:11 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:02:11 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:02:11 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:02:11 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:02:11 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:02:11 -0800
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 16:02:18 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:02:19 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:02:19 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:02:19 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:02:19 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:02:19 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:02:19 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:02:19 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:02:19 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:02:19 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:02:19 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:02:19 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:15:35 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.9ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 25ms (Views: 19.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:15:35 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:15:35 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:15:35 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:15:35 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:15:35 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:15:35 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:15:35 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:15:35 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:15:35 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:15:35 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:15:35 -0800
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:15:47 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:15:47 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:15:47 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:15:47 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:16:30 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:16:30 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:16:30 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:16:30 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:16:30 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:16:30 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:16:30 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:16:30 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:16:30 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:16:30 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:16:30 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:16:30 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:16:34 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:16:51 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `path' for #<Player:0x007fd9c12a1578>):
+    3: <ul>
+    4: 	<%= @players.each do |p|%>
+    5: 	<li>
+    6: 		<%=link_to p.name, p.path%>
+    7: 	</li>
+    8: 	<%end%>
+    9: </ul>
+  app/views/players/index.html.erb:6:in `block in _app_views_players_index_html_erb__4073566022248194736_70286638204580'
+  app/views/players/index.html.erb:4:in `_app_views_players_index_html_erb__4073566022248194736_70286638204580'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.4ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:18:05 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:18:05 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:18:05 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:18:05 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:18:05 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:18:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:18:05 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:18:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:18:05 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:18:05 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:18:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:18:05 -0800
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 16:18:07 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:18:16 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:18:17 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:18:17 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:18:17 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:18:17 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:18:17 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:18:17 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:18:17 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:18:17 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:18:17 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:18:17 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:18:17 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:18:21 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:18:21 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:18:21 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:18:21 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:18:21 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:18:21 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:18:21 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:18:22 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:18:22 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:18:22 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:18:22 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:18:22 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:18:35 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined local variable or method `players' for #<#<Class:0x007fd9c4551d10>:0x007fd9c8028d08>):
+    1: <h1>Players</h1>
+    2: 
+    3: <ul>
+    4: 	<%= players.each do |p|%>
+    5: 	<li>
+    6: 		<%=link_to p.name, p%>
+    7: 	</li>
+  app/views/players/index.html.erb:4:in `_app_views_players_index_html_erb__4073566022248194736_70286670107200'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.4ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:18:48 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:18:48 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:18:48 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:18:48 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:18:48 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:18:48 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:18:48 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:18:48 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:18:48 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:18:48 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:18:48 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:18:48 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:19:10 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:19:10 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:19:10 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:19:10 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:19:10 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:19:10 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:19:10 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:19:10 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:19:10 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:19:10 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:19:10 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:19:10 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:20:02 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:20:02 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:20:02 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:20:02 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:20:02 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:20:02 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:20:02 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:20:02 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:20:02 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:20:02 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:20:02 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:20:02 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:20:03 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:20:04 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:20:04 -0800
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:20:04 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:20:04 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:20:04 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:20:04 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:20:04 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:20:04 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:20:04 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:20:04 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:20:04 -0800
+
+
+Started GET "/players/new" for ::1 at 2014-11-23 16:20:11 -0800
+Processing by PlayersController#new as HTML
+  Rendered players/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 31ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:20:11 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:20:11 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:20:11 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:20:11 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:20:11 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:20:11 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:20:11 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:20:11 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:20:11 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:20:11 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:20:11 -0800
+
+
+Started POST "/players" for ::1 at 2014-11-23 16:20:16 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I9eTxIMTMJC3qU4gRM6T3zMKPUs553Z2zm6nkrrPCw/QY/qms7TdRwaSZ2SwC43PPbLeRM+bfwTUI1YZET2GWA==", "player"=>{"name"=>"josh"}, "commit"=>"Save Player"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "players" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-24 00:20:16.165116"], ["name", "josh"], ["updated_at", "2014-11-24 00:20:16.165116"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2014-11-23 16:20:16 -0800
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:20:16 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:20:16 -0800
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:20:16 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:20:16 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:20:16 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:20:16 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:20:16 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:20:16 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:20:16 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:20:16 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:20:16 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:20:20 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:20:20 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:20:20 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:20:20 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:20:20 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:20:20 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:20:20 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:20:20 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:20:20 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:20:20 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:20:20 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:20:20 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:21:09 -0800
+Processing by PlayersController#index as HTML
+  Rendered players/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/Users/edan/Projects/ScoreKeeper/app/views/players/index.html.erb:7: syntax error, unexpected '<'
+	</li>
+	 ^
+/Users/edan/Projects/ScoreKeeper/app/views/players/index.html.erb:9: unknown regexp option - l
+/Users/edan/Projects/ScoreKeeper/app/views/players/index.html.erb:9: unterminated string meets end of file
+/Users/edan/Projects/ScoreKeeper/app/views/players/index.html.erb:9: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/players/index.html.erb:7: syntax error, unexpected '<'
+  app/views/players/index.html.erb:9: unknown regexp option - l
+  app/views/players/index.html.erb:9: unterminated string meets end of file
+  app/views/players/index.html.erb:9: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.3ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:21:27 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:21:27 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:21:27 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:21:27 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:21:27 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:21:27 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:21:27 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:21:27 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:21:27 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:21:27 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:21:27 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:21:27 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:21:58 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players"  ORDER BY "players"."id" ASC LIMIT 1[0m
+  Rendered players/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `each' for #<Player:0x007fd9c3f24dc0>):
+    1: <h1>Players</h1>
+    2: 
+    3: <ul>
+    4: 	<%= @players.each do |p| %>
+    5: 	<li>
+    6: 		<!--  <%=link_to p.name, p %> -->
+    7: 	</li>
+  app/views/players/index.html.erb:4:in `_app_views_players_index_html_erb__4073566022248194736_70286616973440'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.4ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:22:16 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:22:16 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:22:16 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:22:16 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:22:16 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:22:16 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:22:16 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:22:16 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:22:16 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:22:16 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:22:16 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:22:16 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:22:41 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players"  ORDER BY "players"."id" ASC LIMIT 1[0m
+  Rendered players/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:22:41 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:22:41 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:22:41 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:22:41 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:22:41 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:22:41 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:22:41 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:22:41 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:22:41 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:22:41 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:22:41 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:22:55 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:22:55 -0800
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:22:55 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:22:55 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:22:55 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:22:55 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:22:55 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:22:55 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:22:55 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:22:55 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:22:55 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:22:55 -0800
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 16:24:55 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 16:25:39 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:25:39 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:25:39 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:25:39 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:25:39 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:25:39 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:25:39 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:25:39 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:25:39 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:25:39 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:25:39 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:25:39 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:25:41 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/2" for ::1 at 2014-11-23 16:25:42 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered players/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:25:44 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 16:25:45 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/new" for ::1 at 2014-11-23 16:27:52 -0800
+Processing by PlayersController#new as HTML
+  Rendered players/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:27:52 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:27:52 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:27:52 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:27:52 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:27:52 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:27:52 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:27:52 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:27:52 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:27:52 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:27:52 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:27:52 -0800
+
+
+Started POST "/players" for ::1 at 2014-11-23 16:27:54 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4iMa6cplSmOKB9rE0UquN+rTLON+lWNP0h6o+Ue2prgRl3OL+sKntDs884Alj7An5GvP7Ijpaj3IU1ly7EQr7w==", "player"=>{"name"=>""}, "commit"=>"Save Player"}
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/Users/edan/Projects/ScoreKeeper/app/models/player.rb:5: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/models/player.rb:5: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/players_controller.rb:16:in `create'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.8ms)
+
+
+Started POST "/players" for ::1 at 2014-11-23 16:28:03 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4iMa6cplSmOKB9rE0UquN+rTLON+lWNP0h6o+Ue2prgRl3OL+sKntDs884Alj7An5GvP7Ijpaj3IU1ly7EQr7w==", "player"=>{"name"=>"edan"}, "commit"=>"Save Player"}
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/edan/Projects/ScoreKeeper/app/models/player.rb:5: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/models/player.rb:5: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/players_controller.rb:16:in `create'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.8ms)
+
+
+Started POST "/players" for ::1 at 2014-11-23 16:28:37 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4iMa6cplSmOKB9rE0UquN+rTLON+lWNP0h6o+Ue2prgRl3OL+sKntDs884Alj7An5GvP7Ijpaj3IU1ly7EQr7w==", "player"=>{"name"=>""}, "commit"=>"Save Player"}
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (Unknown validator: 'PresentceValidator'):
+  app/models/player.rb:2:in `<class:Player>'
+  app/models/player.rb:1:in `<top (required)>'
+  app/controllers/players_controller.rb:16:in `create'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.7ms)
+
+
+Started POST "/players" for ::1 at 2014-11-23 16:28:51 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4iMa6cplSmOKB9rE0UquN+rTLON+lWNP0h6o+Ue2prgRl3OL+sKntDs884Alj7An5GvP7Ijpaj3IU1ly7EQr7w==", "player"=>{"name"=>""}, "commit"=>"Save Player"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPlayer Exists (0.2ms)[0m  SELECT  1 AS one FROM "players" WHERE "players"."name" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2014-11-23 16:28:51 -0800
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:28:51 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:28:51 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:28:51 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:28:51 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:28:51 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:28:51 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:28:51 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:28:51 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:28:51 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:28:51 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:28:51 -0800
+
+
+Started POST "/players" for ::1 at 2014-11-23 16:29:17 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4iMa6cplSmOKB9rE0UquN+rTLON+lWNP0h6o+Ue2prgRl3OL+sKntDs884Alj7An5GvP7Ijpaj3IU1ly7EQr7w==", "player"=>{"name"=>""}, "commit"=>"Save Player"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPlayer Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "players" WHERE "players"."name" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Redirected to http://localhost:3000/players
+Completed 302 Found in 12ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:29:17 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:29:18 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:29:18 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:29:18 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:29:18 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:29:18 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:29:18 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:29:18 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:29:18 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:29:18 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:29:18 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:29:18 -0800
+
+
+Started POST "/players" for ::1 at 2014-11-23 16:29:22 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4iMa6cplSmOKB9rE0UquN+rTLON+lWNP0h6o+Ue2prgRl3OL+sKntDs884Alj7An5GvP7Ijpaj3IU1ly7EQr7w==", "player"=>{"name"=>"edan"}, "commit"=>"Save Player"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPlayer Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "players" WHERE "players"."name" = 'edan' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "players" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-24 00:29:22.598580"], ["name", "edan"], ["updated_at", "2014-11-24 00:29:22.598580"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/players
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:29:22 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:29:22 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:29:22 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:29:22 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:29:22 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:29:22 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:29:22 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:29:22 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:29:22 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:29:22 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:29:22 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:29:22 -0800
+  [1m[36mPlayer Load (1.6ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 0]]
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "players"[0m
+
+
+Started POST "/players" for ::1 at 2014-11-23 16:31:08 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4iMa6cplSmOKB9rE0UquN+rTLON+lWNP0h6o+Ue2prgRl3OL+sKntDs884Alj7An5GvP7Ijpaj3IU1ly7EQr7w==", "player"=>{"name"=>"edan"}, "commit"=>"Save Player"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPlayer Exists (0.7ms)[0m  SELECT  1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER('edan') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Redirected to http://localhost:3000/players
+Completed 302 Found in 11ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:31:08 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:31:08 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:31:08 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:31:08 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:31:08 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:31:08 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:31:08 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:31:08 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:31:08 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:31:08 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:31:08 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:31:08 -0800
+
+
+Started POST "/players" for ::1 at 2014-11-23 16:37:23 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4iMa6cplSmOKB9rE0UquN+rTLON+lWNP0h6o+Ue2prgRl3OL+sKntDs884Alj7An5GvP7Ijpaj3IU1ly7EQr7w==", "player"=>{"name"=>"edan"}, "commit"=>"Save Player"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mPlayer Exists (0.2ms)[0m  SELECT  1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER('edan') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered players/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 8.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:37:23 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:37:23 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:37:23 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:37:23 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:37:23 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:37:23 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:37:23 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:37:23 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:37:23 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:37:23 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:37:23 -0800
+
+
+Started POST "/players" for ::1 at 2014-11-23 16:37:34 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CsEt5QVCk0s5HdleaaWxD3b5mEpor4eaqqcxmzMUrOT5dUSHNeV+nIgm8BqdYK8feEF7RZ7Tjuiw6sAQmOYhsw==", "player"=>{"name"=>""}, "commit"=>"Save Player"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPlayer Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER('') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered players/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:37:34 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:37:34 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:37:34 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:37:34 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:37:34 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:37:34 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:37:34 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:37:34 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:37:34 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:37:34 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:37:34 -0800
+
+
+Started GET "/players/edit" for ::1 at 2014-11-23 16:41:24 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Player with 'id'=edit):
+  app/controllers/players_controller.rb:11:in `show'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.1ms)
+
+
+Started GET "/players/1/edit" for ::1 at 2014-11-23 16:41:31 -0800
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered players/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:41:31 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:41:31 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:41:31 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:41:31 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:41:31 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:41:31 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:41:31 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:41:31 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:41:31 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:41:31 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:41:31 -0800
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 16:41:36 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 16:42:29 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `edit_player_path' for #<Player:0x007fd9c45e8350>):
+    1: <%= link_to "See all players", players_path%>
+    2: <h1><%= @player.name %></h1>
+    3: 
+    4: <%= link_to 'Edit', @player.edit_player_path%>
+  app/views/players/show.html.erb:4:in `_app_views_players_show_html_erb___277005597502364258_70286639566840'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.5ms)
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 16:42:34 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:42:34 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:42:34 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:42:35 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:42:35 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:42:35 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:42:35 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:42:35 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:42:35 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:42:35 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:42:35 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:42:35 -0800
+
+
+Started GET "/players/1/edit" for ::1 at 2014-11-23 16:42:41 -0800
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered players/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 16:42:43 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/1/edit" for ::1 at 2014-11-23 16:42:44 -0800
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered players/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/players/1" for ::1 at 2014-11-23 16:42:49 -0800
+
+AbstractController::ActionNotFound (The action 'update' could not be found for PlayersController):
+  actionpack (4.2.0.beta4) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.0.beta4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0.beta4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0.beta4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0.beta4) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0.beta4) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0.beta4) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0.beta4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0.beta4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0.beta4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0.beta4) lib/action_dispatch/routing/route_set.rb:780:in `call'
+  rack (1.6.0.beta) lib/rack/etag.rb:23:in `call'
+  rack (1.6.0.beta) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.0.beta) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/flash.rb:257:in `call'
+  rack (1.6.0.beta) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0.beta) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/cookies.rb:558:in `call'
+  activerecord (4.2.0.beta4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0.beta4) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0.beta4) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0.beta4) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0.beta4) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0.beta4) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0.beta4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0.beta) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0.beta) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.2.0.beta4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0.beta) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0.beta) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0.beta4) lib/rails/engine.rb:514:in `call'
+  railties (4.2.0.beta4) lib/rails/application.rb:161:in `call'
+  rack (1.6.0.beta) lib/rack/tempfile_reaper.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/lint.rb:49:in `_call'
+  rack (1.6.0.beta) lib/rack/lint.rb:37:in `call'
+  rack (1.6.0.beta) lib/rack/showexceptions.rb:24:in `call'
+  rack (1.6.0.beta) lib/rack/commonlogger.rb:33:in `call'
+  rack (1.6.0.beta) lib/rack/chunked.rb:54:in `call'
+  rack (1.6.0.beta) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/edan/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/edan/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/edan/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+
+
+Started PATCH "/players/1" for ::1 at 2014-11-23 16:46:50 -0800
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DVnGlT+ND9bauGbqPUGf6ekvfEMk1bu7tIuOi2pm/Hz+7a/3DyriAWuDT67JhIH555efTNKpssmuxn8AwZRxKw==", "player"=>{"name"=>"Eda"}, "commit"=>"Save Player", "id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPlayer Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "players" WHERE (LOWER("players"."name") = LOWER('Eda') AND "players"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "players" SET "name" = ?, "updated_at" = ? WHERE "players"."id" = 1  [["name", "Eda"], ["updated_at", "2014-11-24 00:46:50.750862"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/players/1
+Completed 302 Found in 17ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 16:46:50 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:46:50 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:46:50 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:46:50 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:46:50 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:46:50 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:46:50 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:46:50 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:46:50 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:46:50 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:46:50 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:46:50 -0800
+
+
+Started GET "/players/1/edit" for ::1 at 2014-11-23 16:46:53 -0800
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered players/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/players/1" for ::1 at 2014-11-23 16:46:55 -0800
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k78S2DS+utJNGSSKlA4Xg1aw+XTcD3Wfds2k5bsiUQFgC3u6BBlXBfwiDc5gywmTWAgaeypzfO1sgFVuENDcVg==", "player"=>{"name"=>"Edan"}, "commit"=>"Save Player", "id"=>"1"}
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPlayer Exists (0.1ms)[0m  SELECT  1 AS one FROM "players" WHERE (LOWER("players"."name") = LOWER('Edan') AND "players"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "players" SET "name" = ?, "updated_at" = ? WHERE "players"."id" = 1[0m  [["name", "Edan"], ["updated_at", "2014-11-24 00:46:55.181399"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/players/1
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 16:46:55 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:46:55 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:46:55 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:46:55 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:46:55 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:46:55 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:46:55 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:46:55 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:46:55 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:46:55 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:46:55 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:46:55 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:46:57 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/2" for ::1 at 2014-11-23 16:46:58 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered players/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/2/edit" for ::1 at 2014-11-23 16:46:59 -0800
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered players/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/players/2" for ::1 at 2014-11-23 16:47:01 -0800
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AyW3f2wwlBZMWZNpci5gKY7Du48fLIMGdwzwkANnREfwkd4dXJd5wf1iui2G6345gHtYgOlQinRtQQEbqJXJEA==", "player"=>{"name"=>"edan"}, "commit"=>"Save Player", "id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPlayer Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "players" WHERE (LOWER("players"."name") = LOWER('edan') AND "players"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered players/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:47:01 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:47:01 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:47:01 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:47:01 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:47:01 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:47:01 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:47:01 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:47:01 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:47:01 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:47:01 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:47:01 -0800
+
+
+Started PATCH "/players/2" for ::1 at 2014-11-23 16:47:05 -0800
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xaVv8ytyfVcgfGpSm0AByDls2rwQfSrcvesFF4wPfP82EQaRG9WQgJFHQxZvhR/YN9Q5s+YBI66npvScJ/3xqA==", "player"=>{"name"=>"josh"}, "commit"=>"Save Player", "id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPlayer Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "players" WHERE (LOWER("players"."name") = LOWER('josh') AND "players"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/players/2
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/players/2" for ::1 at 2014-11-23 16:47:05 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered players/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 16:47:05 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 16:47:05 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 16:47:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 16:47:05 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 16:47:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 16:47:05 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 16:47:05 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 16:47:05 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 16:47:05 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 16:47:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 16:47:05 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 16:48:53 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/2/edit" for ::1 at 2014-11-23 16:49:15 -0800
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered players/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/2" for ::1 at 2014-11-23 16:49:18 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered players/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/2/edit" for ::1 at 2014-11-23 16:49:20 -0800
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered players/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/2/edit" for ::1 at 2014-11-23 17:24:24 -0800
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlayer Load (1.0ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered players/_form.html.erb (8.9ms)
+  Rendered players/edit.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 52ms (Views: 42.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 17:24:24 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 17:24:24 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 17:24:24 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 17:24:24 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 17:24:24 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 17:24:24 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 17:24:24 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 17:24:24 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 17:24:24 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 17:24:24 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 17:24:24 -0800
+
+
+Started GET "/players/2" for ::1 at 2014-11-23 17:24:29 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered players/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/2/edit" for ::1 at 2014-11-23 17:24:31 -0800
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered players/_form.html.erb (1.7ms)
+  Rendered players/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/2" for ::1 at 2014-11-23 17:24:32 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered players/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/new" for ::1 at 2014-11-23 17:24:35 -0800
+Processing by PlayersController#new as HTML
+  Rendered players/_form.html.erb (1.4ms)
+  Rendered players/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @player do |f| %>
+    2: 
+    3: <!-- Display Errors -->
+    4: <% if @player.errors.any?%>
+  app/views/players/_form.html.erb:1:in `_app_views_players__form_html_erb__1738437064595383201_70286612645720'
+  app/views/players/new.html.erb:4:in `_app_views_players_new_html_erb__455472012188890889_70286618981180'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.5ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.8ms)
+
+
+Started GET "/players/1/edit" for ::1 at 2014-11-23 17:24:56 -0800
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlayer Load (0.4ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered players/_form.html.erb (1.3ms)
+  Rendered players/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 17:24:56 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 17:24:56 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 17:24:56 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 17:24:56 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 17:24:56 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 17:24:56 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 17:24:56 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 17:24:56 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 17:24:56 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 17:24:56 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 17:24:56 -0800
+
+
+Started PATCH "/players/1" for ::1 at 2014-11-23 17:24:58 -0800
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cA5rmuI7PMAWWIfRXTvBrA0OxnvYODjwYew5GHrh55CDugL40pzRF6djrpWp/t+8A7YldC5EMYJ7ociT0RNqxw==", "player"=>{"name"=>"Edan"}, "commit"=>"Update Player", "id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPlayer Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "players" WHERE (LOWER("players"."name") = LOWER('Edan') AND "players"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/players/1
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/players/1" for ::1 at 2014-11-23 17:24:58 -0800
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered players/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 17:24:58 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 17:24:58 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 17:24:58 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 17:24:58 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 17:24:58 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 17:24:58 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 17:24:58 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 17:24:58 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 17:24:58 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 17:24:58 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 17:24:58 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 17:25:00 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/new" for ::1 at 2014-11-23 17:25:03 -0800
+Processing by PlayersController#new as HTML
+  Rendered players/_form.html.erb (0.6ms)
+  Rendered players/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @player do |f| %>
+    2: 
+    3: <!-- Display Errors -->
+    4: <% if @player.errors.any?%>
+  app/views/players/_form.html.erb:1:in `_app_views_players__form_html_erb__1738437064595383201_70286612645720'
+  app/views/players/new.html.erb:4:in `_app_views_players_new_html_erb__455472012188890889_70286618981180'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.6ms)
+
+
+Started GET "/players/new" for ::1 at 2014-11-23 17:26:17 -0800
+Processing by PlayersController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant PlayersController::Article):
+  app/controllers/players_controller.rb:4:in `new'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.2ms)
+
+
+Started GET "/players/new" for ::1 at 2014-11-23 17:26:24 -0800
+Processing by PlayersController#new as HTML
+  Rendered players/_form.html.erb (1.9ms)
+  Rendered players/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 17:26:25 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 17:26:25 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 17:26:25 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 17:26:25 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 17:26:25 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 17:26:25 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 17:26:25 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 17:26:25 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 17:26:25 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 17:26:25 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 17:26:25 -0800
+
+
+Started POST "/players" for ::1 at 2014-11-23 17:26:30 -0800
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vEGRu6+xT78H7GI6uuQruSKVQUf1AMbzxYvr18uE9Q5P9fjZnxaiaLbXS35OITWpLC2iSAN8z4HfxhpcYHZ4WQ==", "player"=>{"name"=>"Temp"}, "commit"=>"Create Player"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPlayer Exists (0.1ms)[0m  SELECT  1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER('Temp') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "players" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-24 01:26:30.399202"], ["name", "Temp"], ["updated_at", "2014-11-24 01:26:30.399202"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/players
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 17:26:30 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 17:26:30 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 17:26:30 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 17:26:30 -0800
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 17:26:30 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 17:26:30 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 17:26:30 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 17:26:30 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 17:26:30 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 17:26:30 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 17:26:30 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 17:26:30 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 17:29:39 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined method `delete_player_path' for #<#<Class:0x007fd9c1eed390>:0x007fd9c1ee46f0>):
+     5: 	<li>
+     6: 		<%=link_to p.name, p %>
+     7: 		<%=link_to 'Edit', edit_player_path(p) %>
+     8: 		<%=link_to 'Delete', delete_player_path(p) %>
+     9: 	</li>
+    10: 	<% end %>
+    11: </ul>
+  app/views/players/index.html.erb:8:in `block in _app_views_players_index_html_erb__4073566022248194736_70286619112860'
+  app/views/players/index.html.erb:4:in `_app_views_players_index_html_erb__4073566022248194736_70286619112860'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.2ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 17:29:47 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `destroy_player_path' for #<#<Class:0x007fd9c1eed390>:0x007fd9c3be6618>):
+     5: 	<li>
+     6: 		<%=link_to p.name, p %>
+     7: 		<%=link_to 'Edit', edit_player_path(p) %>
+     8: 		<%=link_to 'Delete', destroy_player_path(p) %>
+     9: 	</li>
+    10: 	<% end %>
+    11: </ul>
+  app/views/players/index.html.erb:8:in `block in _app_views_players_index_html_erb__4073566022248194736_70286634328560'
+  app/views/players/index.html.erb:4:in `_app_views_players_index_html_erb__4073566022248194736_70286634328560'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.0ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 17:30:52 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x007fd9c1eed390>:0x007fd9c4643c50>):
+     5: 	<li>
+     6: 		<%=link_to p.name, p %>
+     7: 		<%=link_to 'Edit', edit_player_path(p) %>
+     8: 		<%=link_to 'Delete', player_path(article),
+     9:                     method: :delete, data: { confirm: 'Are you sure?' } %>
+    10: 	</li>
+    11: 	<% end %>
+  app/views/players/index.html.erb:8:in `block in _app_views_players_index_html_erb__4073566022248194736_70286639761160'
+  app/views/players/index.html.erb:4:in `_app_views_players_index_html_erb__4073566022248194736_70286639761160'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 17:30:59 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x007fd9c1eed390>:0x007fd9c1cc6760>):
+     5: 	<li>
+     6: 		<%=link_to p.name, p %>
+     7: 		<%=link_to 'Edit', edit_player_path(p) %>
+     8: 		<%=link_to 'Delete', players_path(article),
+     9:                     method: :delete, data: { confirm: 'Are you sure?' } %>
+    10: 	</li>
+    11: 	<% end %>
+  app/views/players/index.html.erb:8:in `block in _app_views_players_index_html_erb__4073566022248194736_70286618010940'
+  app/views/players/index.html.erb:4:in `_app_views_players_index_html_erb__4073566022248194736_70286618010940'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.1ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 17:31:07 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 17:31:07 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 17:31:07 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 17:31:07 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 17:31:07 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 17:31:07 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 17:31:07 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 17:31:07 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 17:31:07 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 17:31:07 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 17:31:07 -0800
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 17:31:07 -0800
+
+
+Started DELETE "/players.4" for ::1 at 2014-11-23 17:31:23 -0800
+
+ActionController::RoutingError (No route matches [DELETE] "/players.4"):
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0.beta) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0.beta) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.2.0.beta4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0.beta) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0.beta) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0.beta4) lib/rails/engine.rb:514:in `call'
+  railties (4.2.0.beta4) lib/rails/application.rb:161:in `call'
+  rack (1.6.0.beta) lib/rack/tempfile_reaper.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/lint.rb:49:in `_call'
+  rack (1.6.0.beta) lib/rack/lint.rb:37:in `call'
+  rack (1.6.0.beta) lib/rack/showexceptions.rb:24:in `call'
+  rack (1.6.0.beta) lib/rack/commonlogger.rb:33:in `call'
+  rack (1.6.0.beta) lib/rack/chunked.rb:54:in `call'
+  rack (1.6.0.beta) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/edan/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/edan/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/edan/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.1.5@global/gems/actionpack-4.2.0.beta4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.2ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 17:31:28 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 17:31:29 -0800
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 17:31:29 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 17:31:29 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 17:31:29 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 17:31:29 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 17:31:29 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 17:31:29 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 17:31:29 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 17:31:29 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 17:31:29 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 17:31:29 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 17:32:33 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 17:32:33 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 17:32:33 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 17:32:33 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 17:32:33 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 17:32:33 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 17:32:33 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 17:32:33 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 17:32:33 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 17:32:33 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 17:32:33 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 17:32:33 -0800
+
+
+Started GET "/players" for ::1 at 2014-11-23 17:33:49 -0800
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 17:33:49 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 17:33:49 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 17:33:49 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 17:33:49 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 17:33:49 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 17:33:49 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 17:33:49 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 17:33:49 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 17:33:49 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 17:33:49 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 17:33:49 -0800
+
+
+Started DELETE "/players/4" for ::1 at 2014-11-23 17:33:57 -0800
+Processing by PlayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HHanGLy9w6iGdfVQHdLGUMCSdm7QzPstKWf8MnOwlSPvws56jBoufzdO3BTpF9hAziqVYSaw8l8zKg252EIYdA==", "id"=>"4"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "players" WHERE "players"."id" = ?  [["id", 4]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/players
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/players" for ::1 at 2014-11-23 17:33:57 -0800
+Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT "players".* FROM "players"
+  Rendered players/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2014-11-23 17:33:57 -0800
+
+
+Started GET "/assets/dashboard.css?body=1" for ::1 at 2014-11-23 17:33:57 -0800
+
+
+Started GET "/assets/matches.css?body=1" for ::1 at 2014-11-23 17:33:57 -0800
+
+
+Started GET "/assets/players.css?body=1" for ::1 at 2014-11-23 17:33:57 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2014-11-23 17:33:57 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2014-11-23 17:33:57 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2014-11-23 17:33:57 -0800
+
+
+Started GET "/assets/players.js?body=1" for ::1 at 2014-11-23 17:33:57 -0800
+
+
+Started GET "/assets/dashboard.js?body=1" for ::1 at 2014-11-23 17:33:57 -0800
+
+
+Started GET "/assets/matches.js?body=1" for ::1 at 2014-11-23 17:33:57 -0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2014-11-23 17:33:57 -0800

@@ -1,8 +1,5 @@
 class Player < ActiveRecord::Base
-def new
-end
-
-def create
-end
+	validates :name,	presence: true, 
+						uniqueness: {case_sensitive: false}
 
 end
