@@ -1,14 +1,14 @@
-<h1>Players</h1>
+<h1>Matches</h1>
 
 <ul>
-	<% @players.each do |p| %>
+	<% @matches.each do |p| %>
 	<li>
 		<%=link_to p.name, p %>
-		<%=link_to 'Edit', edit_player_path(p) %>
+		# <%=link_to 'Edit', edit_player_path(p) %>
 		<%=link_to 'Delete', player_path(p),
                     method: :delete, data: { confirm: 'Are you sure?' } %>
 	</li>
 	<% end %>
 </ul>
 
-<%=link_to 'New', new_player_path(p) %>
+<%=link_to 'New', new_match_path(p) %>

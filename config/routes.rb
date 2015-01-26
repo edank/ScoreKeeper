@@ -1,6 +1,9 @@
 ScoreKeeper::Application.routes.draw do
   
   resources :players
+  resources :matches do
+    resources :games
+  end
 
   get "dashboard/index"
   # The priority is based upon order of creation: first created -> highest priority.
