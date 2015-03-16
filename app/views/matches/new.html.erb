@@ -1,6 +1,18 @@
 <h1>New Match</h1>
 
 <div class="content">
+	<!-- Display Errors -->
+	<% if @match.errors.any?%>
+	  	<div id="error_explanation alert error-alert">
+		    <ul>
+		    <% @match.errors.full_messages.each do |msg| %>
+		    	<li><%= msg %></li>
+		    <% end %>
+		    </ul>
+		</div>
+	<% end %>
+<!-- End errors -->
+
 	<!-- <form role="form" id="formMatch" class="form-inline"> -->
 	<!-- , class: "form-inline" -->
 	<!-- < % = #form_tag("/matches", :class => "form-inlinexxx") do % > -->
@@ -9,37 +21,59 @@
 		<div class="form-group pName">
 			<!-- < %= label_tag(:player1, "Player 1 (Door side)") % > -->
 			<%= m.label :player1_id, "Player 1 (Door side)" %>
-			<%= select_tag(:player1, options_from_collection_for_select(@players, :id, :name), :prompt => "Select Player") %>
-			
+			<%= m.select(:player1_id,options_from_collection_for_select(Player.all, :id, :name), :prompt => "Select Player") %>
 		</div>
 		<div class="form-group pName">
 			<!-- < %= label_tag(:player2, "Player 2  (Window side)")	% >	 -->
 			<%= m.label :player2_id, "Player 2  (Window side)" %>
-			<%= select_tag(:player2, options_from_collection_for_select(@players, :id, :name), :prompt => "Select Player") %>
+			<%= m.select(:player2_id, options_from_collection_for_select(Player.all, :id, :name), :prompt => "Select Player") %>
 		</div>
+		
 		<hr>
-		<!-- Games -->
+
 		<h4>Games</h4>
+
+
+
+		<!-- Games -->
 		<div class="games">
 			<div class="row">
 				<label class="col-sm-2">Game #</label>
 				<label class="col-sm-2 p1name">Player 1</label>
 				<label class="col-sm-2 p2name">Player 2</label>
 			</div>
+			<!-- Will display for every game that exists for this match (empty if not) -->
+			<%= m.fields_for :games do |game_form| %> 
+				<div class="row game">
+					<span class="col-sm-2"><%=game_form.index + 1%></span>
+		
+					<div class="col-sm-2">
+						<%= game_form.select :player1_points, 0..20, :prompt => 'Select'%>
+						<%#= game_form.text_field :player1_points%>
+					</div>
+					
+					<%# game_form.label :player2_points %>
+					<div class="col-sm-2">
+						<%= game_form.select :player2_points, 0..20, :prompt => 'Select'%>
+						<%#= game_form.text_field :player2_points%>
+					</div>
+				</div>
+			<% end %>		
+<!-- 
 			<div class="row game">
 				<label class="gameNum col-sm-2">1</label>
 				<div class="col-sm-2">
-					<%= select_tag "p1g1",options_for_select(0..20), class: "p1g form-control"%>
+					< %= select_tag "p1g1",options_for_select(0..20), class: "p1g form-control"%>
 				</div>
 				<div class="col-sm-2">
-					<%= select_tag "p2g1",options_for_select(0..20), {class: "p2g form-control"}%>
+					< %= select_tag "p2g1",options_for_select(0..20), {class: "p2g form-control"}%>
 				</div>
-			</div>
+			</div> -->
 			
 			<div class="addRemoveBtns">
 				<!-- <div class="addGame ">Add Game</div> -->
-				<button class="addGame btn btn-success btn-xs ">Add Game</button>
-				<button class="removeGame btn btn-danger btn-xs">Remove last Game</button>
+				<button  type="button" class="addGame btn btn-success btn-xs ">Add Game</button>
+				<button  type="button" class="removeGame btn btn-danger btn-xs">Remove last Game</button>
 			</div>
 		</div>
 		<hr>
