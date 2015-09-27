@@ -11,3 +11,15 @@
  *= require_self
  *= require_tree .
  */
+
+
+/*Errors*/
+
+label.error {
+    color: #c7254e;
+    font-weight: normal;
+}
+
+#error_explanation li {
+    list-style: none;
+}
