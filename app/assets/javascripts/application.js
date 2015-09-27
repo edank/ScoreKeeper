@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function () {
+	
+//MATCHES
+
+// hide/show games
+$("#match_new input[name=match_game_count]").change(function(){
+	var games = parseInt($(this).val());
+	$("#match_new .game").show().slice(games).hide();
+});
+
+
+});

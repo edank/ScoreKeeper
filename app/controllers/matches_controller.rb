@@ -6,7 +6,7 @@ class MatchesController < ApplicationController
 
 	def new
 		@match = Match.new
-		2.times {@match.games.build} #make html appear on page
+		3.times {@match.games.build} #make html appear on page
 	end
 
 	def show
@@ -16,8 +16,9 @@ class MatchesController < ApplicationController
 		@p2 = Player.find(@match.player2_id)
 	end
 
+	# Called when Post to /macthes
 	def create
-		#render plain: params
+		# render plain: match_params
 		# create new match
 		@match = Match.new(match_params)
 		if (@match.save)
@@ -25,7 +26,6 @@ class MatchesController < ApplicationController
 		else
 			render 'new'
 		end
-		#create new games
 		
 		# associate games with match
 	end
