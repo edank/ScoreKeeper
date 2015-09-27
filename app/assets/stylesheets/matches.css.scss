@@ -2,7 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* INDEX */
 
 .pName label.error {
 	margin-left: 10px;
+}
+
+
+/* SHOW */
+#content_match_show {
+
+	#games {
+
+		.winner span {
+			border-color: green;				
+		}
+		
+		span {
+			display: inline-block;
+			padding: 4px 7px;
+			border: 1px solid;
+			border-radius: 50%;
+			line-height: 1em;
+			border-color: transparent;
+			
+		}
+	}
 }

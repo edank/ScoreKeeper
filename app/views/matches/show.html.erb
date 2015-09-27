@@ -1,0 +1,36 @@
+<div id="content_match_show">
+	<h3>Match</h3>
+	<%= link_to "See all matches", matches_path%>
+
+	
+	<ul>
+		<li><label>Date</label>: <%=l @match.created_at, format: '%b %d, %Y' %></li>
+		<li><label>Winner</label>: <%= @match.winner.name %></li>
+	</ul>
+	<h4>Games</h3>
+	<div id="games" class="row">
+		<div class="col-sm-6">
+			<table class="table">
+				<tr>
+					<th><%= @p1.name %></th>
+					<th><%= @p2.name %></th>
+				</tr>
+				
+				<!-- Games Loop -->
+				<% @match.games.each do |game|%>
+				<%  p1WinnerClass =  game.winner.id == @p1.id ? 'winner' : '';
+					p2WinnerClass =  game.winner.id == @p2.id ? 'winner' : ''
+				%>
+				<tr>
+					<td class="<%= p1WinnerClass %>"><span><%=game.player1_points%></span></td>
+					<td class="<%= p2WinnerClass %>"><span><%=game.player2_points%></span></td>
+				</tr>
+				<% end %>
+
+			</table>
+		</div>
+	</div>
+	
+
+
+</div>

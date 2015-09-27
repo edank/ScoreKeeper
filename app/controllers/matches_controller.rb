@@ -6,7 +6,7 @@ class MatchesController < ApplicationController
 
 	def new
 		@match = Match.new
-		3.times {@match.games.build} #make html appear on page
+		3.times {@match.games.build} #defining max 3 games for now
 	end
 
 	def show
@@ -26,8 +26,6 @@ class MatchesController < ApplicationController
 		else
 			render 'new'
 		end
-		
-		# associate games with match
 	end
 
 

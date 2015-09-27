@@ -14,6 +14,9 @@ class Match < ActiveRecord::Base
 		game_wins(2)
 	end
 	
+	def winner()
+		p1_game_wins > p2_game_wins ? Player.find(player1_id) : Player.find(player2_id)
+	end
 
 	private
 
