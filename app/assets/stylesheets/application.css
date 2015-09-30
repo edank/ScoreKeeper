@@ -29,3 +29,20 @@ ul {
     list-style: none;
     padding-left: 0;
 }
+
+
+/*Tables*/
+td.link {
+    padding: 0 !important;
+}
+
+td a {
+    display: block;
+    padding: 8px;
+}
+
+	td a:hover {
+	    background-color: #eaeaea;
+	    text-decoration: none;
+	}
+

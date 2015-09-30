@@ -2,9 +2,7 @@
 
 <!-- Display Errors -->
 <% if @player.errors.any?%>
-  <div id="error_explanation">
-    <h2><%= pluralize(@player.errors.count, "error") %> prohibited
-      this player from being saved:</h2>
+  <div id="error_explanation" class="alert alert-danger">
     <ul>
     <% @player.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
@@ -19,6 +17,6 @@
 	<%= f.text_field :name%>
 </p>
   <p>
-    <%= f.submit %>
+    <%= f.submit nil, :class => "btn btn-primary" %>
   </p>
 <% end %>

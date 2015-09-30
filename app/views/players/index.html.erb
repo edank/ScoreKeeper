@@ -1,14 +1,20 @@
 <h1>Players</h1>
-
-<ul>
-	<% @players.each do |p| %>
-	<li>
-		<%=link_to p.name, p %>
-		<%=link_to 'Edit', edit_player_path(p) %>
-		<%=link_to 'Delete', player_path(p),
-                    method: :delete, data: { confirm: 'Are you sure?' } %>
-	</li>
-	<% end %>
-</ul>
-
-<%=link_to 'New', new_player_path(p) %>
+<div class="row">
+	<div class="col-md-6">
+		<table class="table">
+			<tr>
+				<th>Name</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<% @players.each do |p| %>
+			<td class="link"><%=link_to p.name, p %></td>
+			<td class="link"><%=link_to 'Edit', edit_player_path(p) %></td>
+			<td class="link"><%=link_to 'Delete', player_path(p),
+		                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+</div>
+<%=link_to 'New Player', new_player_path(p), :class => "btn btn-default" %>

@@ -1,30 +1,36 @@
 <h1>Matches</h1>
-<div>
-	<div class="row">
-		<div class="col-xs-2">Match Number</div>
-		<div class="col-xs-3">Door (P1)</div>
-		<div class="col-xs-2">P1 wins</div>
-		<div class="col-xs-2">P2 wins</div>
-		<div class="col-xs-3">Window (P2)</div>
-	</div>
+<div id="matches">
+	
+	<table class="table table-hover">
+		<tr>
+			<th>Match Number</th>
+			<th>Door (P1)</th>
+			<th>P1 wins</th>
+			<th>P2 wins</th>
+			<th>Window (P2)</th>
+		</tr>
 
-	<% @matches.each do |m| %>
-	<div class="row">
-		<%
-		p1 = Player.find(m.player1_id)
-		p2 = Player.find(m.player2_id)
-		%>
-		<div class="col-xs-2"><%=link_to m.id, match_path(m.id)%></div>
-		<div class="col-xs-3"><%=link_to p1.name, player_path(p1.id)%></div>		<!-- P1 Name -->
-		<div class="col-xs-2"><%=link_to m.p1_game_wins, match_path(m.id), {:class => "sda"}%></div>	<!-- P1 Wins-->
-		<div class="col-xs-2"><%=link_to m.p2_game_wins, match_path(m.id)%></div>	<!-- P2 Wins -->
-		<div class="col-xs-3"><%=link_to p2.name, player_path(p2.id)%></div>				<!-- P2 Name -->
-		
 
-		<!-- %=link_to 'Delete', player_path(m),
-		method: :delete, data: { confirm: 'Are you sure?' } %> -->
-	</div>
-	<% end %>
+		<% @matches.each do |m| %>
+			<%
+				p1 = Player.find(m.player1_id)
+				p2 = Player.find(m.player2_id)
+				winner = m.winner
+				p1_winner_class = winner.id == p1.id ? "winner" : ""
+				p2_winner_class = winner.id == p2.id ? "winner" : ""
+
+			%>
+			<tr>
+				<td class="link"><%=link_to m.id, match_path(m.id)%></td>             <!-- Match number -->
+				<td class="link"><%=link_to p1.name, player_path(p1.id), {:class => p1_winner_class}%></td>		<!-- P1 Name -->
+				<td class="link"><%=link_to m.p1_game_wins, match_path(m.id), {:class => p1_winner_class}%></td>	<!-- P1 Wins-->
+				<td class="link"><%=link_to m.p2_game_wins, match_path(m.id), {:class => p2_winner_class}%></td>	<!-- P2 Wins -->
+				<td class="link"><%=link_to p2.name, player_path(p2.id), {:class => p2_winner_class}%></td>		<!-- P2 Name -->
+			</tr>
+		<% end %>
+	</table>
+
+
 
 	<%=link_to 'New Match', new_match_path(p), class: "btn btn-default" %>
 </div>

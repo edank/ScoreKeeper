@@ -1,7 +1,7 @@
 class Match < ActiveRecord::Base
 	has_many :games
 	validates :player1_id, :player2_id ,presence: true
-	validates_associated :games
+	#validates_associated :games
 	validate :different_players
 	
 	accepts_nested_attributes_for :games, reject_if: lambda { |att| att['player1_points'].blank? || att['player2_points'].blank?  } #creates games_attributes
