@@ -2,5 +2,27 @@
 	<%= link_to "See all players", players_path%>
 	<h1><%= @player.name %></h1>
 
+<div class="row">
+	<div class="col-xs-6">
+	<table>
+		<tr>
+			<td>Games Played</td>
+			<td><%= %></td>
+		</tr>
+		<tr>
+			<td>Wins</td>
+			<td><%= %></td>
+		</tr>
+		<tr>
+			<td>Losses</td>
+			<td><%= %></td>
+		</tr>
+		<tr>
+			<td>Win %</td>
+			<td><%= %>%</td>
+		</tr>
+	</table>
+
+
 	<%= link_to 'Edit', edit_player_path(@player)%>
 </div>
