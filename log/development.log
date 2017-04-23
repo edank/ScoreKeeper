@@ -30725,3 +30725,564 @@ Processing by PlayersController#show as HTML
 Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms)
   [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1[0m  [["id", 1]]
   [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT 1  [["id", 1]]
+Started GET "/" for ::1 at 2017-04-22 23:00:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 213ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__515385914004918759_70364564109500'
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.6ms)
+Started GET "/" for ::1 at 2017-04-22 23:10:00 -0700
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__515385914004918759_70364538997000'
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.6ms)
+Started GET "/" for ::1 at 2017-04-22 23:10:39 -0700
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__515385914004918759_70364584815340'
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.1ms)
+Started GET "/" for ::1 at 2017-04-22 23:27:45 -0700
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__515385914004918759_70364538381320'
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.9ms)
+Started GET "/" for ::1 at 2017-04-22 23:33:28 -0700
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__515385914004918759_70364584699740'
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.7ms)
+Started GET "/" for ::1 at 2017-04-22 23:41:06 -0700
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__515385914004918759_70364527524580'
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.1ms)
+Started GET "/" for ::1 at 2017-04-22 23:41:08 -0700
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__515385914004918759_70364584583000'
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.7ms)
+Started GET "/" for ::1 at 2017-04-22 23:42:46 -0700
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__515385914004918759_70364584364740'
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.4ms)
+Started GET "/" for ::1 at 2017-04-22 23:42:56 -0700
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__515385914004918759_70364564347420'
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.6ms)
+Started GET "/" for ::1 at 2017-04-22 23:48:34 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__3892104420235213041_70196915851040'
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.1ms)
+Started GET "/" for ::1 at 2017-04-22 23:52:22 -0700
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__3892104420235213041_70196962415180'
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.4ms)
+Started GET "/" for ::1 at 2017-04-22 23:52:24 -0700
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__3892104420235213041_70196901926280'
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/edan/.rvm/gems/ruby-2.4.1@rails.5.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.8ms)
+Started GET "/" for ::1 at 2017-04-22 23:52:59 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 796ms (Views: 786.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.self-48f927604179613695c27000ed12443af47696fc12dec20521db79914c3e6fa2.css?body=1" for ::1 at 2017-04-22 23:53:00 -0700
+Started GET "/assets/players.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-04-22 23:53:00 -0700
+Started GET "/assets/matches.self-ad47d07e78c96706124d6ce209d2517a4e589698c8d372acbdc1adb83ac6f1a5.css?body=1" for ::1 at 2017-04-22 23:53:00 -0700
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-04-22 23:53:00 -0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-04-22 23:53:00 -0700
+Started GET "/assets/matches.self-2d0a61a8bd190eac37673596d51a54bc1359c7c31c19bc3539299a7b0223a529.js?body=1" for ::1 at 2017-04-22 23:53:00 -0700
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-04-22 23:53:00 -0700
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-04-22 23:53:00 -0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-04-22 23:53:00 -0700
+Started GET "/assets/dashboard.self-19d82ec0dd94922c0ac804732a577f9a7a60b91bfd6d214f53c7ca8e7d96465b.js?body=1" for ::1 at 2017-04-22 23:53:00 -0700
+Started GET "/assets/application.self-bf2482e6f04be530d86d073bc742fec67e9a4b73c620ab806ca32974ed4baa07.css?body=1" for ::1 at 2017-04-22 23:53:00 -0700
+Started GET "/assets/application.self-f33cf7d49bafa859f9985bc30434595576a154493d372718965e240409afaf88.js?body=1" for ::1 at 2017-04-22 23:53:00 -0700
+Started GET "/assets/players.self-7a55e32a1f3893010e466e313ff282fa70c60de346991c6fd541e0383c91c27a.js?body=1" for ::1 at 2017-04-22 23:53:00 -0700
+Started GET "/players" for ::1 at 2017-04-22 23:53:05 -0700
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 47ms (Views: 41.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/players/new" for ::1 at 2017-04-22 23:53:07 -0700
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (16.7ms)
+  Rendered players/new.html.erb within layouts/application (18.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/players" for ::1 at 2017-04-22 23:53:10 -0700
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C/H5D/P3sSkt0BudhN6QxF7OusgcFLa9JIicG2j9KgE/4yCc1c7/nT3WqoTSjMYbZa1Gp6KUUlqFiGrXzp7b7A==", "player"=>{"name"=>"Joe"}, "commit"=>"Create Player"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Joe"], ["created_at", 2017-04-23 06:53:10 UTC], ["updated_at", 2017-04-23 06:53:10 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/players
+Completed 302 Found in 11ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/players" for ::1 at 2017-04-22 23:53:10 -0700
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/1/edit" for ::1 at 2017-04-22 23:53:13 -0700
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_form.html.erb (1.7ms)
+  Rendered players/edit.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/matches" for ::1 at 2017-04-22 23:53:16 -0700
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" ORDER BY "matches"."id" DESC[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 3]]
+  [1m[36mMatch Load (0.0ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 2]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered matches/index.html.erb within layouts/application (42.8ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 57.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/matches/new" for ::1 at 2017-04-22 23:53:20 -0700
+Processing by MatchesController#new as HTML
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered matches/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 33ms (Views: 28.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches/new" for ::1 at 2017-04-22 23:54:14 -0700
+Processing by MatchesController#new as HTML
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered matches/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches/new" for ::1 at 2017-04-22 23:54:52 -0700
+Processing by MatchesController#new as HTML
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered matches/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches/new" for ::1 at 2017-04-22 23:54:55 -0700
+Processing by MatchesController#new as HTML
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered matches/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/matches" for ::1 at 2017-04-22 23:54:56 -0700
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" ORDER BY "matches"."id" DESC[0m
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 3]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 2]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered matches/index.html.erb within layouts/application (20.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/matches/new" for ::1 at 2017-04-22 23:54:59 -0700
+Processing by MatchesController#new as HTML
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered matches/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches/new" for ::1 at 2017-04-22 23:55:35 -0700
+Processing by MatchesController#new as HTML
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered matches/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches" for ::1 at 2017-04-22 23:55:37 -0700
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" ORDER BY "matches"."id" DESC[0m
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 3]]
+  [1m[36mMatch Load (0.0ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 2]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered matches/index.html.erb within layouts/application (20.7ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/matches/new" for ::1 at 2017-04-22 23:55:38 -0700
+Processing by MatchesController#new as HTML
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered matches/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players" for ::1 at 2017-04-22 23:55:39 -0700
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-04-22 23:55:41 -0700
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-22 23:55:44 -0700
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
