@@ -20,14 +20,14 @@
 	<!-- Player names -->
 		<div class="form-group pName">
 			<!-- < %= label_tag(:player1, "Player 1 (Door side)") % > -->
-			<%= m.label :player1_id, "Player 1 (Door side)" %>
+			<%= m.label :player1_id, "Player 1" %>
 
 			<%= collection_select( :match, :player1_id, Player.all, :id, :name, {include_blank: 'Select Player'},{:class => 'required', :title=>'Please select a player'}) %>
 
 		</div>
 		<div class="form-group pName">
 			<!-- < %= label_tag(:player2, "Player 2  (Window side)")	% >	 -->
-			<%= m.label :player2_id, "Player 2  (Window side)" %>
+			<%= m.label :player2_id, "Player 2" %>
 		<!-- 	< %= m.select(:player2_id, options_from_collection_for_select(Player.all, :id, :name), :prompt => "Select Player") %> -->
 			<%= collection_select( :match, :player2_id, Player.all, :id, :name, {include_blank: 'Select Player'},{:class => 'required', :title=>'Please select a player'}) %>
 		</div>
