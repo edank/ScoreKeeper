@@ -14,5 +14,10 @@
 # [START runtime]
 runtime: ruby
 env: flex
-entrypoint: bundle exec rackup -p $PORT
+#entrypoint: rails server -p $PORT
+#entrypoint: bundle exec rails server -p $PORT
+entrypoint: rails server Puma -p $PORT
+
+env_variables:
+  SECRET_KEY_BASE: 3693e6dc479b76e2e3b6edc431cf988f29d544408d70c0d8b1770f562d8be0fed5f99467f5a78b0e7437750568dddd183c48610559e1166724e0de06ac43bb12
 # [END runtime]
