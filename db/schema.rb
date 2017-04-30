@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -13,24 +12,23 @@
 
 ActiveRecord::Schema.define(version: 20150125042237) do
 
-  create_table "games", force: true do |t|
+  create_table "games", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "player1_points"
     t.integer  "player2_points"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "match_id"
+    t.index ["match_id"], name: "index_games_on_match_id", using: :btree
   end
 
-  add_index "games", ["match_id"], name: "index_games_on_match_id"
-
-  create_table "matches", force: true do |t|
+  create_table "matches", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "player1_id"
     t.integer  "player2_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "players", force: true do |t|
+  create_table "players", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"

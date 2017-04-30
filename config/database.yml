@@ -18,8 +18,14 @@ test:
   pool: 5
   timeout: 5000
 
-production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+production: 
+  adapter: mysql2
   pool: 5
   timeout: 5000
+  username: root
+  password: sh4b4ngs
+  # database:  db/production.sqlite3
+  database: rails-cloudsql-database
+  socket: /cloudsql/score-keeper-163803:us-central1:score-keeper
+
+
