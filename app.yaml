@@ -17,15 +17,15 @@ env: flex
 #entrypoint: rails server -p $PORT
 #entrypoint: bundle exec rails server -p $PORT
 # entrypoint: rails server Puma -p $PORT
-entrypoint: bundle exec rackup --port $PORT
+entrypoint: bundle exec rackup -p $PORT
 
-env_variables:
-  SECRET_KEY_BASE: 3693e6dc479b76e2e3b6edc431cf988f29d544408d70c0d8b1770f562d8be0fed5f99467f5a78b0e7437750568dddd183c48610559e1166724e0de06ac43bb12
-  MYSQL_USER: root
-  MYSQL_PASSWORD: sh4b4ngs
-  MYSQL_DATABASE: score-keeper
-  MYSQL_SOCKET_PATH: /cloudsql/score-keeper-163803:us-central1:score-keeper
+# env_variables:
+#   SECRET_KEY_BASE: 3693e6dc479b76e2e3b6edc431cf988f29d544408d70c0d8b1770f562d8be0fed5f99467f5a78b0e7437750568dddd183c48610559e1166724e0de06ac43bb12
+#   MYSQL_USER: root
+#   MYSQL_PASSWORD: sh4b4ngs
+#   MYSQL_DATABASE: db-sql
+#   MYSQL_SOCKET_PATH: /cloudsql/score-keeper-edank:us-central1:db-sql
 
 beta_settings:
-  cloud_sql_instances: score-keeper-163803:us-central1:score-keeper
+  cloud_sql_instances: score-keeper-edank:us-central1:db-sql
 # [END runtime]

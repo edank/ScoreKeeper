@@ -2,3 +2,6 @@ tmp
 log
 *.DS_Store
 log/development.log
+bin
+Gemfile.lock
+vendor/bundle

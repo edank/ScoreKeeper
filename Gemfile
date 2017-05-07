@@ -5,7 +5,7 @@ gem 'rails', '5.0.2'
 ruby "2.4.1"
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 5.0.0.beta1'
@@ -24,7 +24,7 @@ gem 'coffee-rails', '~> 4.2.1'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -34,12 +34,23 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# group :production, :development do
+group :production do
+  gem "mysql2", "~> 0.3.0"
+end
+
+# group :test do
+group :development, :test do
+  gem "sqlite3"
+end
+
+
 
 gem "rack"
 gem "puma"
 
-gem 'mysql2'
-gem "sequel"
+# gem 'mysql2'
+# gem "sequel"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

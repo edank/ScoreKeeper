@@ -3,11 +3,41 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
-development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+mysql_settings: &mysql_settings
+  adapter: mysql2
+  encoding: utf8
   pool: 5
-  timeout: 5000
+  username: edan
+  password: sk123123
+  database: score_keeper_db
+  socket: /cloudsql/score-keeper-edank:us-central1:db-sql
+  
+# production: 
+#   adapter: sqlite3
+#   pool: 5
+#   timeout: 5000
+#   username: root
+#   password: sh4b4ngs
+#   # database:  db/production.sqlite3
+#   database: rails-cloudsql-database
+#   socket: /cloudsql/score-keeper-163803:us-central1:score-keeper
+
+production:
+  <<: *mysql_settings
+
+
+# development:
+#   adapter: sqlite3
+#   database: db/development.sqlite3
+#   pool: 5
+#   timeout: 5000
+
+development:
+  <<: *mysql_settings
+ # adapter: sqlite3
+ # pool: 5
+ # timeout: 5000
+ # database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -18,14 +48,5 @@ test:
   pool: 5
   timeout: 5000
 
-production: 
-  adapter: mysql2
-  pool: 5
-  timeout: 5000
-  username: root
-  password: sh4b4ngs
-  # database:  db/production.sqlite3
-  database: rails-cloudsql-database
-  socket: /cloudsql/score-keeper-163803:us-central1:score-keeper
 
 
