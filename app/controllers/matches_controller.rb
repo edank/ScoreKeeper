@@ -6,7 +6,7 @@ class MatchesController < ApplicationController
 
 	def new
 		@match = Match.new
-		3.times {@match.games.build} #defining max 3 games for now
+		5.times {@match.games.build} #defining max 5 games for now
 	end
 
 	def show

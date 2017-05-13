@@ -38,8 +38,14 @@
 			<label for="match_game_1">1</label>
 			<input name="match_game_count" id="match_game_1" value="1" type="radio" >
 			
+			<label for="match_game_2">2</label>
+			<input name="match_game_count" id="match_game_2" value="2" type="radio" >
+
 			<label for="match_game_3">3</label>
 			<input name="match_game_count" id="match_game_3" value="3" type="radio" checked="checked" >
+
+			<label for="match_game_5">5</label>
+			<input name="match_game_count" id="match_game_5" value="5" type="radio">
 		</div>
 		<hr>
 
@@ -48,19 +54,19 @@
 		<!-- Games -->
 		<div class="games">
 			<div class="row">
-				<label class="col-sm-2">Game #</label>
-				<label class="col-sm-2 p1name">Player 1</label>
-				<label class="col-sm-2 p2name">Player 2</label>
+				<label class="col-sm-2 col-xs-4">Game #</label>
+				<label class="col-sm-2 p1name col-xs-4">Player 1</label>
+				<label class="col-sm-2 p2name col-xs-4">Player 2</label>
 			</div>
 			
 			<!-- Will display for every game that exists for this match (empty if not) -->
 			<%= m.fields_for :games do |game_form| %> 
 				<div class="row game">
 					<!-- Game Number -->
-					<span class="col-sm-2"><%=game_form.index + 1%></span>
+					<span class="col-sm-2 col-xs-4"><%=game_form.index + 1%></span>
 		
 					<!-- Game Points -->
-					<div class="col-sm-2">
+					<div class="col-sm-2 col-xs-4">
 						<%= game_form.select :player1_points,
 						0..15,
 						{:include_blank => 'Select'},
@@ -68,7 +74,7 @@
 					</div>
 					
 					<%# game_form.label :player2_points %>
-					<div class="col-sm-2">
+					<div class="col-sm-2 col-xs-4">
 					<!-- 	< %= game_form.select :player2_points, 0..15, :prompt => 'Select'%> -->
 						<%= game_form.select :player2_points,
 						0..15,
